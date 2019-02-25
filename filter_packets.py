@@ -1,12 +1,15 @@
-import sys
+#MiniProj2 
+#Evren Ince
 
 # Function to filter ICMP packets from Node*.txt into text file Node*_filtered.txt
 # only grabs icmp packets but no hex included
 
+import sys
+
 def read_packets(filename, L):
     # open file 
     hello = []
-    f = open(filename, 'r')
+    f = open('Data/'+filename, 'r')
     data = f.read().split('\n\n')
     temp_ind = -1
     for i,line in enumerate(data):
@@ -29,7 +32,7 @@ def read_packets(filename, L):
     f.close()
 
 def file_writer(filename1, packets):
-    f1 = open(filename1, 'w+')
+    f1 = open('Data/'+filename1, 'w+')
     for packet in packets:
         f1.write(packet)
     f1.close()

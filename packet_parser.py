@@ -111,7 +111,7 @@ def read_file(FILENAME):
         for item in packetDump:
             hexOnly.extend(item.group(0).split()) #split group 0 (0-16 bytes) and store them in an array
 
-        # print(hexOnly)
+        # print(hexOnly) #DEBUG
 
         packetDump = []
         while len(hexOnly)>0:
